@@ -2,6 +2,7 @@
 #Title: Quantum Random
 #Author: Aleksandar Damnjanovic
 #Date: 19.11.2021
+#Last edit: 20.11.2021
 #******************************************
 
 import requests
@@ -9,19 +10,17 @@ import json
 import time
 import sys
 
-address= 'https://qrng.anu.edu.au/API/jsonI.php?length=1&type=hex16&size=8'
-
 class QuantumRand:
 
     def __init__(self):
         self.next()
 
     def next(self):
-        data=requests.get(address)
-        obj= json.loads(data.text)
-        hexString= obj['data'][0]
-        self.value= int(hexString,16)
-        self.hex= hex(self.value)
+        __address= 'https://qrng.anu.edu.au/API/jsonI.php?length=1&type=hex16&size=8'
+        __data=requests.get(__address)
+        __obj= json.loads(__data.text)
+        __hexString= __obj['data'][0]
+        self.value= int(__hexString,16)
         time.sleep(0.5)
 
     def getRand(self, min=0, max=sys.maxsize):
@@ -37,3 +36,11 @@ class QuantumRand:
             __ret= min + (self.value % (max-min))
 
         return __ret
+
+    def getFloat(self, decimal=2):
+        if self.value<sys.maxsize:
+            __ret= float(self.value/ sys.maxsize)
+        else:
+            __ret= float(sys.maxsize/self.value)
+
+        return f'%.{decimal}f' % __ret

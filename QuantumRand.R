@@ -2,6 +2,7 @@
 #Title: Quantum Random
 #Author: Aleksandar Damnjanovic
 #Date: 19.11.2021
+#Last edit: 20.11.2021
 #******************************************
 
 library("httr") 
@@ -42,8 +43,11 @@ getRand<-function(minv, maxv){
   return(ret)  
 }
 
-
-for(i in c(0:15)){
-  r<-getRand(0,100)
-  print(r)
+getFloat<-function(decimal){
+  ret<-getRand(0,1000)
+  ret<-as.numeric(ret)
+  ret<- as.double(ret/1000)
+  f<-paste0('%.',decimal,'f')
+  ret<-sprintf(f, ret)
+  return(ret)
 }
