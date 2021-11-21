@@ -1,7 +1,7 @@
 # Quatnum Random
 
 ## Basic information
-Here you can find simple Python, R and C  libraries for the purpose of producing radnom numbers from the quatum source. Organization providing source infromation is ANU QRNG through their API. If you use this library on the daily basis or for commercial purpose, I am encouraging you to donate to this people for ther work. Those guys and girls gave tremendous contribution to humanity and moder world by giving this informations for free.
+Here you can find simple Python, R, C and Java  libraries for the purpose of producing radnom numbers from the quatum source. Organization providing source infromation is ANU QRNG through their API. If you use this library on the daily basis or for commercial purpose, I am encouraging you to donate to this people for ther work. Those guys and girls gave tremendous contribution to humanity and moder world by giving this informations for free.
 
 [ANU QRNG](https://qrng.anu.edu.au/) website
 
@@ -34,3 +34,9 @@ Only way to get reall random numbers using modern day technology is from quantum
 
     In Makefile, there are example of how you can compile shared object from the code from  QuantumRand.h but I believe that the best course of action would be just to include this header file in new object and to compile it with it.
     QuantumRand.h depends on **libcurl** and **libjson-c** libraries.
+
++ **With Java** same as with Python, first you will have to instantiate object `QuantumRand`. At the same time you will generate first random value for that object to work with.
+    + `next` will create new random value and return it.
+    + `getLong` will return present random value for that object.
+    + `getLong(min, max)` is overloaded `getLong` function that allows you to determine minimal and maximal random value.
+    + `getFloat` will return double in between 0 and 1.
