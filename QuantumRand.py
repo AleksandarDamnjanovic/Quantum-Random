@@ -26,6 +26,7 @@ class QuantumRand:
     def getRand(self, min=0, max=sys.maxsize):
         if min<0 or max>sys.maxsize:
             print(f'min must be bigger than or 0\nmax must be less that {sys.maxsize}')
+            return -1
 
         __ret=0
         if max!=sys.maxsize:
