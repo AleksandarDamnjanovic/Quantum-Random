@@ -1,7 +1,7 @@
 # Quatnum Random
 
 ## Basic information
-Here you can find simple Python, R, C and Java  libraries for the purpose of producing radnom numbers from the quatum source. Organization providing source infromation is ANU QRNG through their API. If you use this library on the daily basis or for commercial purpose, I am encouraging you to donate to this people for ther work. Those guys and girls gave tremendous contribution to humanity and moder world by giving this informations for free.
+Here you can find simple Python, R, C and Java  libraries for the purpose of producing radnom numbers from the quatum source. Organization providing source infromation is ANU QRNG through their API. If you use this library on the daily basis or for commercial purpose, I am encouraging you to donate to this people for ther work. Those guys and girls gave tremendous contribution to humanity and modern world by giving this informations for free.
 
 [ANU QRNG](https://qrng.anu.edu.au/) website
 
